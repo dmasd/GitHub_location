@@ -1,0 +1,81 @@
+<meta charset = "utf - 8">
+<script type ="text/javascript">
+
+
+// Задание 1. Игра в загадки.
+
+// Создаем переменную для подсчета правильных и не правильных ответов.
+
+var correctAnswer = 0;
+var wrongAnswer = 0;
+
+
+// Загадываем загадку №1 и получаем ответ от пользователя
+
+var answer1 =  prompt ("Загадка №1. На нём сидят?");
+ 
+// Проверка загадки
+
+if (answer1 == "стул" || answer1 == "Стул" || answer1 == "табуретка" || answer1 == "Табуретка"){
+document.write ("Вы угадали.<br>");
+correctAnswer++;
+
+} else {
+document.write ("Не правильный ответ.<br>"); 
+wrongAnswer++;}
+
+
+
+
+// Загадываем загадку №2 и получаем ответ от пользователя
+
+var answer1 =  prompt ("Загадка №2. На нём лежат?");
+ 
+// Проверка загадки
+
+if (answer1 == "кровать" || answer1 == "Кровать" || answer1 == "койка" || answer1 == "Койка"){
+document.write ("Вы угадали.<br>");
+correctAnswer++;
+} else {
+document.write ("Не правильный ответ.<br>");
+ wrongAnswer++;}
+
+
+
+// Загадываем загадку №3 и получаем ответ от пользователя
+
+var answer1 =  prompt ("Загадка №3. По нему ходят?");
+ 
+// Проверка загадки
+
+if (answer1 == "пол" || answer1 == "Пол" || answer1 == "земля" || answer1 == "Земля"){
+document.write ("Вы угадали.<br>");
+correctAnswer++;
+} else {
+ document.write ("Не правильный ответ.<br>");
+ wrongAnswer++;}
+
+
+
+// Загадываем загадку №4 и получаем ответ от пользователя
+
+var answer1 =  prompt ("Загадка №4. Домашнее мяукающее животное?");
+ 
+// Проверка загадки
+
+if (answer1 == "кот" || answer1 == "Кот" || answer1 == "кошка" || answer1 == "Кошка"){
+document.write ("Вы угадали.<br>");
+correctAnswer++;
+} else {
+document.write ("Не правильный ответ.<br>");
+ wrongAnswer++;}
+
+
+
+// Подсчет правильных и не правильных ответов
+
+document.write ("Количество правильных ответов: " + correctAnswer + ", количество не правильных:" + wrongAnswer);
+
+
+
+</script>
