@@ -1,0 +1,56 @@
+<meta charset = "utf - 8">
+<script type ="text/javascript">
+
+
+// Задание 3. Угадай число.
+
+
+for (;;) {
+
+var check = prompt ("Будете играть?");
+if (check == "Нет" || check == "нет" || check == "не" || check == "Не"){
+break;
+} 
+
+var answer = parseInt (Math.random() * 	100);
+
+var maxTryCount = 10;
+
+for (var tryCount = 1; tryCount < maxTryCount; ){
+
+
+var userAnswer = +prompt ("Угадайте число от 0 до 100");
+if (userAnswer == answer){
+alert("Поздравляю, вы угадали!");
+break;
+} else if (userAnswer > answer){
+alert ("Вы ввели слишком большое число");
+
+var check = prompt ("Будете играть?");
+if (check == "Нет" || check == "нет" || check == "не" || check == "Не"){
+break;
+} 
+
+} else if (userAnswer < answer) {
+
+alert ("Вы ввели слишком маленькое число");
+var check = prompt ("Будете играть?");
+if (check == "Нет" || check == "нет" || check == "не" || check == "Не"){
+break;
+} 
+}
+
+}
+
+
+userAnswer= +prompt("Попробуйте еще раз. Введите число от 1 до 100 \n ");
+}
+
+
+
+
+alert("Вы проиграли! Правильный ответ: " + answer);
+
+
+
+</script>
