@@ -7,16 +7,15 @@
 
 for (;;) {
 
-var check = prompt ("Будете играть?");
+var check = prompt ("Будете играть?");  // опрос пользователя
 if (check == "Нет" || check == "нет" || check == "не" || check == "Не"){
 break;
 } 
 
-var answer = parseInt (Math.random() * 	100);
+var answer = parseInt (Math.random() * 	100);  // создаём рандомное число
 
-var maxTryCount = 10;
 
-for (var tryCount = 1; tryCount < maxTryCount; ){
+for (;; ){
 
 
 var userAnswer = +prompt ("Угадайте число от 0 до 100");
@@ -26,7 +25,7 @@ break;
 } else if (userAnswer > answer){
 alert ("Вы ввели слишком большое число");
 
-var check = prompt ("Будете играть?");
+var check = prompt ("Продолжите?");
 if (check == "Нет" || check == "нет" || check == "не" || check == "Не"){
 break;
 } 
@@ -34,7 +33,7 @@ break;
 } else if (userAnswer < answer) {
 
 alert ("Вы ввели слишком маленькое число");
-var check = prompt ("Будете играть?");
+var check = prompt ("Продолжите?");
 if (check == "Нет" || check == "нет" || check == "не" || check == "Не"){
 break;
 } 
@@ -45,6 +44,7 @@ break;
 
 userAnswer= +prompt("Попробуйте еще раз. Введите число от 1 до 100 \n ");
 }
+
 
 
 
