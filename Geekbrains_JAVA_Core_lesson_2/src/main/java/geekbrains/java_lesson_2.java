@@ -57,14 +57,22 @@ public class java_lesson_2 {
 
         System.out.println("\n    Задание 4.");
 
-        int[][] arrayTable = new int[6][6];
+        int arraySize = 6;
+        int[][] arrayTable = new int[arraySize][arraySize];
 
 
-        for (int a = 0, b = 0; a > arrayTable.length; a++, b++ ){
-            if (a == b) {
-                arrayTable [a][b]  = 1;
-                System.out.print(arrayTable[a][b]);
-            } else arrayTable [a][b]  = 0; System.out.print(arrayTable[a][b]);
+        for (int a = 0; a < arrayTable.length; a++){
+            for (int b = 0; b < arrayTable.length; b++) {
+               if (a == b) {
+                   arrayTable [a][b] = 1;
+                   System.out.print(arrayTable[a][b] + " ");
+               } else {
+                   arrayTable [a][b] = 0;
+                   System.out.print(arrayTable[a][b] + " ");
+               }
+
+            }
+            System.out.println();
         }
 
 
