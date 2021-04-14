@@ -6,25 +6,30 @@ public class lesson_3 {
 
     public static void main(String[] args) {
 
-        for (; ; ) {
+        Scanner sc = new Scanner(System.in);
+
+
+     //ЗАДАНИЕ 1
+
+
+/*          for (; ; ) {
 
             int z = randomNumber(); // метод задает число
             int a = 3; // колличество попыток
             int b = a - 1; // Оставшееся колличество попыток
 
             System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
-            Scanner sc1 = new Scanner(System.in);
-            int g = sc1.nextInt();
+
+            int g = sc.nextInt();
 
             if (g == 1) {
 
                 System.out.println("Угадайте число от 0 до 9. ");
-                Scanner sc = new Scanner(System.in);
+
 
                 for (int i = 0; i < a; i++, b--) {
 
                     int c = sc.nextInt();
-
                     System.out.println(" Рандомное загаданое: " + z);
                     if (c == z) {
                         System.out.println("Вы угадали число.");
@@ -37,20 +42,23 @@ public class lesson_3 {
 
                 }
 
-                sc.close();
-            } else  break;
 
-            sc1.close();
+            } else break;
         }
+*/
 
-    }
 
-    public static int randomNumber() {
-        int f = 10; // максимальное значение
-        int randomNumber1 = (int) (Math.random() * f);
-        return randomNumber1;
+        //ЗАДАНИЕ 2
 
-    }
+        String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot",
+                "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut",
+                "pear", "pepper", "pineapple", "pumpkin", "potato"};
+
+
+
+
+
+
 
 /* 1. Написать программу, которая загадывает случайное число от 0 до 9 и пользователю дается 3 попытки угадать
  это число. При каждой попытке компьютер должен сообщить, больше ли указанное пользователем число, чем загаданное,
@@ -72,6 +80,22 @@ String str = "apple";
 char a = str.charAt(0); - метод, вернет char, который стоит в слове str на первой позиции
 Играем до тех пор, пока игрок не отгадает слово.
 Используем только маленькие буквы.*/
+
+        sc.close();
+
+
+
+
+}
+    public static int randomNumber() {
+        int f = 10; // максимальное значение
+        int randomNumber1 = (int) (Math.random() * f);
+        return randomNumber1;
+    }
+
+
+
+
 
 
 }
