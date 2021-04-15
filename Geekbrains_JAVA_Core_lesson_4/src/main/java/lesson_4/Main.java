@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static Scanner scanner = new Scanner(System.in);
+    public static final char DOT_EMPTY = 'ф';
+    public static final char DOT_X = 'X';
+    public static final char DOT_O = 'O';
 
     public static void main(String[] args) {
 
@@ -16,14 +19,12 @@ public class Main {
         // реализовать проверку подиагонали после хода
 
         startWelcome();
-
+        start();
 
     }
 
     private static void startWelcome() {
-
         System.out.println(" Добро пожаловать в игру крестики - нолики!");
-        start();
     }
 
     private static void start() {
@@ -32,30 +33,40 @@ public class Main {
         checkField(startField);
     }
 
-    private static void checkField(int a) {
+    private static void checkField(int SIZE) {
         int chips; // фишки для победы
-        if (a < 3) {
+        if (SIZE < 3) {
             System.out.println("Вы ввели размер игрового поля меньше 3-х! Попробуйте заново");
             start();
-        } else if (5 >= a && a >= 3) {
+        } else if (5 >= SIZE && SIZE >= 3) {
             chips = 3;
-            System.out.println("Ваше игровое поле, равно " + a + " на " + a + ". Условие победы " + chips + " фишки вподряд.");
-            gamefield(a, chips);
-        } else if (6 <= a && a <= 9) {
+            System.out.println("Ваше игровое поле, равно " + SIZE + " на " + SIZE + ". Условие победы " + chips + " фишки вподряд.");
+            gamefield(SIZE, chips);
+        } else if (6 <= SIZE && SIZE <= 9) {
             chips = 4;
-            System.out.println("Ваше игровое поле, равно " + a + " на " + a + ". Условие победы " + chips + " фишки вподряд.");
-            gamefield(a, chips);
-        } else if (10 <= a) {
+            System.out.println("Ваше игровое поле, равно " + SIZE + " на " + SIZE + ". Условие победы " + chips + " фишки вподряд.");
+            gamefield(SIZE, chips);
+        } else if (10 <= SIZE) {
             chips = 5;
-            System.out.println("Ваше игровое поле, равно " + a + " на " + a + ". Условие победы " + chips + " фишки вподряд.");
-            gamefield(a, chips);
+            System.out.println("Ваше игровое поле, равно " + SIZE + " на " + SIZE + ". Условие победы " + chips + " фишки вподряд.");
+            gamefield(SIZE, chips);
         }
     }
 
-    public static void gamefield(int a, int b) {
-        System.out.println("ТУт задействован метод ");
+    public static void gamefield(int SIZE, int b) {
+
+       int [][] arrayField = new int [SIZE][SIZE];
+
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                arrayField[i][j] =  DOT_EMPTY;
+            }
+        }
+        System.out.println (" 1 " + " ");
 
 
     }
+
+
 
 }
